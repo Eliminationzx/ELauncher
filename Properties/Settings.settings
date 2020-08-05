@@ -1,0 +1,216 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Launcher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="autologin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="clientLocale" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="launcherURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/launcher/WoW Launcher.exe</Value>
+    </Setting>
+    <Setting Name="binaryFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">wow.exe</Value>
+    </Setting>
+    <Setting Name="newsURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/api/launcher/news</Value>
+    </Setting>
+    <Setting Name="mainURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090</Value>
+    </Setting>
+    <Setting Name="forumsURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vanilla</Value>
+    </Setting>
+    <Setting Name="videosURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/api/launcher/videos</Value>
+    </Setting>
+    <Setting Name="expansions" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vanilla,bc,wotlk,cata,mop,wod,legion,bfa</Value>
+    </Setting>
+    <Setting Name="serverStatsURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/api/serverinfos</Value>
+    </Setting>
+    <Setting Name="clientLocales" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enGB,enUS,deDE,esES,frFR,koKR,zhCN,zhTW,enCN,enTW,esMX,ruRU</Value>
+    </Setting>
+    <Setting Name="chosenServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cpURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090</Value>
+    </Setting>
+    <Setting Name="streamsURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="faqURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientVanillaFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientWotlkFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientMopFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientLegionFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1RfEUXCkFPvcT30oFuxIocoLye_V8YPiP</Value>
+    </Setting>
+    <Setting Name="realmlistFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">realmlist.wtf</Value>
+    </Setting>
+    <Setting Name="realmlistVanilla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="realmlistWotlk" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="realmlistMop" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="realmlistLegion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="clientPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GDRIVEAPI_KEY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AIzaSyBIpgC6iKCil4M65ky3Z3kz7SijPr4dMXM</Value>
+    </Setting>
+    <Setting Name="GDRIVEAPI_FIELDS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">id,md5Checksum,originalFilename,fullFileExtension,webContentLink,size,mimeType,name,parents</Value>
+    </Setting>
+    <Setting Name="GDRIVE_APIDOMAIN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.googleapis.com</Value>
+    </Setting>
+    <Setting Name="wotlkCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="vanillaCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="mopCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="legionCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientVersionVanilla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1.12</Value>
+    </Setting>
+    <Setting Name="clientVersionWotlk" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">3.3.5a</Value>
+    </Setting>
+    <Setting Name="clientVersionMop" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5.4.8a</Value>
+    </Setting>
+    <Setting Name="clientVersionLegion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7.3.5a</Value>
+    </Setting>
+    <Setting Name="clientBuildVanilla" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5875</Value>
+    </Setting>
+    <Setting Name="clientBuildWotlk" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">12340</Value>
+    </Setting>
+    <Setting Name="clientBuildMop" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">18414</Value>
+    </Setting>
+    <Setting Name="clientBuildLegion" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25848</Value>
+    </Setting>
+    <Setting Name="youtubeURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="twitchURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="discordURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="facebookURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="notifyMessageDuration" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="launcherChangelogsURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/api/launcher/changelogs?launcher_version=</Value>
+    </Setting>
+    <Setting Name="launcherVersionURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8090/api/launcher/version</Value>
+    </Setting>
+    <Setting Name="clientBuildBC" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8606</Value>
+    </Setting>
+    <Setting Name="clientVersionBC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2.4.3a</Value>
+    </Setting>
+    <Setting Name="bcCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="realmlistBC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="clientBCFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientBuildBFA" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">31478</Value>
+    </Setting>
+    <Setting Name="clientVersionBFA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8.2.0</Value>
+    </Setting>
+    <Setting Name="bfaCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="realmlistBFA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="clientBFAFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientBuildWOD" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">19116</Value>
+    </Setting>
+    <Setting Name="clientVersionWOD" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">6.0.3</Value>
+    </Setting>
+    <Setting Name="wodCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="realmlistWOD" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="clientBuildCATA" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15595</Value>
+    </Setting>
+    <Setting Name="clientVersionCATA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">4.3.4</Value>
+    </Setting>
+    <Setting Name="cataCPatchFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="realmlistCATA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">set realmlist localhost</Value>
+    </Setting>
+    <Setting Name="clientWODFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="clientCATAFID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="feedbackURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
