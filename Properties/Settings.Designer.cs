@@ -680,14 +680,5 @@ namespace Launcher.Properties {
                 return ((string)(this["logFilePath"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("wotlk")]
-        public string serverList {
-            get {
-                return ((string)(this["serverList"]));
-            }
-        }
     }
 }

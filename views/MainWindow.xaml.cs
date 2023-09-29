@@ -60,7 +60,7 @@ namespace Launcher
 
         private void InitCheckedExpansion()
         {
-            var serversList = explode(",", Properties.Settings.Default.serverList);
+            var serversList = explode(",", Properties.Settings.Default.expansions);
 
             foreach (var server in serversList)
             {
@@ -127,7 +127,7 @@ namespace Launcher
 
         private static bool ServerValidation(string server)
         {
-            return !String.IsNullOrEmpty(server) && Properties.Settings.Default.serverList.Contains(server);
+            return !String.IsNullOrEmpty(server) && Properties.Settings.Default.expansions.Contains(server);
         }
 
         public static string[] explode(string separator, string source)

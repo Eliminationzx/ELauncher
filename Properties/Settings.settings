@@ -215,8 +215,5 @@
     <Setting Name="logFilePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">launcher_logfile.txt</Value>
     </Setting>
-    <Setting Name="serverList" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">wotlk</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

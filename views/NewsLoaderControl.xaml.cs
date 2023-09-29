@@ -93,7 +93,7 @@ namespace Launcher
 
         private static bool ServerValidation(string server)
         {
-            return Properties.Settings.Default.serverList.Contains(server);
+            return Properties.Settings.Default.expansions.Contains(server);
         }
 
         public async void SetNewsAsync()
