@@ -142,7 +142,7 @@ namespace Launcher
 
             var bg_canv = FindName("bg_expansion") as Canvas;
             System.Windows.Controls.Image bgImage = new System.Windows.Controls.Image();
-            bgImage.Source = new BitmapImage(new Uri(String.Format("pack://application:,,,/img/bg_{0}.jpg", server)));
+            bgImage.Source = new BitmapImage(new Uri(String.Format("pack://application:,,,/views/img/bg_{0}.jpg", server)));
             bgImage.Stretch = Stretch.UniformToFill;
             bgImage.StretchDirection = StretchDirection.UpOnly;
             bg_canv.Children.Add(bgImage);
@@ -155,7 +155,7 @@ namespace Launcher
             border.BorderBrush = colorBrush;
             border.BorderThickness = new Thickness(0, 5, 0, 1);
             System.Windows.Controls.Image borderImage = new System.Windows.Controls.Image();
-            borderImage.Source = new BitmapImage(new Uri(String.Format("pack://application:,,,/img/bg_{0}.jpg", server)));
+            borderImage.Source = new BitmapImage(new Uri(String.Format("pack://application:,,,/views/img/bg_{0}.jpg", server)));
             borderImage.Stretch = Stretch.UniformToFill;
             borderImage.StretchDirection = StretchDirection.UpOnly;
             borderImage.Effect = new BlurEffect() { Radius = 20 };
@@ -185,7 +185,7 @@ namespace Launcher
         {
             int tsa_index = 0;
             ToolStripItem[] tsa_collector = new ToolStripItem[10];
-            tsa_collector[tsa_index++] = new ToolStripMenuItem(String.Format("Downloading progress ({0}%)", progress_total.Value.ToString()), System.Drawing.Image.FromStream(Application.GetResourceStream(new Uri("pack://application:,,,/img/icons/down-arrow.png")).Stream), (s, e) => dwn.Cancel()) { Visible = false };
+            tsa_collector[tsa_index++] = new ToolStripMenuItem(String.Format("Downloading progress ({0}%)", progress_total.Value.ToString()), System.Drawing.Image.FromStream(Application.GetResourceStream(new Uri("pack://application:,,,/views/img/icons/down-arrow.png")).Stream), (s, e) => dwn.Cancel()) { Visible = false };
             tsa_collector[tsa_index++] = new NotifyMenuToolStripSeparator();
             tsa_collector[tsa_index++] = new ToolStripMenuItem("Home", null, (s, e) => Process.Start(Properties.Settings.Default.mainURL));
             tsa_collector[tsa_index++] = new ToolStripMenuItem("Community", null, (s, e) => Process.Start(Properties.Settings.Default.forumsURL));
@@ -194,7 +194,7 @@ namespace Launcher
             tsa_collector[tsa_index++] = new ToolStripMenuItem("Broadcasts", null, (s, e) => Process.Start(Properties.Settings.Default.streamsURL));
             tsa_collector[tsa_index++] = new ToolStripMenuItem("Check updates", null, (s, e) => LauncherVersionSync(true));
             tsa_collector[tsa_index++] = new NotifyMenuToolStripSeparator();
-            tsa_collector[tsa_index++] = new ToolStripMenuItem("Exit", System.Drawing.Image.FromStream(Application.GetResourceStream(new Uri("pack://application:,,,/img/icons/close-icon.png")).Stream), (s, e) => Application.Current.Shutdown());
+            tsa_collector[tsa_index++] = new ToolStripMenuItem("Exit", System.Drawing.Image.FromStream(Application.GetResourceStream(new Uri("pack://application:,,,/views/img/icons/close-icon.png")).Stream), (s, e) => Application.Current.Shutdown());
 
             ContextMenuStrip cms = new ContextMenuStrip();
             cms.Items.AddRange(tsa_collector);
@@ -253,14 +253,14 @@ namespace Launcher
 
         private void InitMainWindowCursors()
         {
-            Cursor = new Cursor(Application.GetResourceStream(new Uri("pack://application:,,,/img/cursors/arrow.cur")).Stream);
+            Cursor = new Cursor(Application.GetResourceStream(new Uri("pack://application:,,,/views/img/cursors/arrow.cur")).Stream);
 
             List<System.Windows.Controls.Button> listButtons = new List<System.Windows.Controls.Button>();
             GetLogicalChildCollection(this, listButtons);
 
             foreach (var btn in listButtons)
             {
-                btn.Cursor = new Cursor(Application.GetResourceStream(new Uri("pack://application:,,,/img/cursors/magnify.ani")).Stream);
+                btn.Cursor = new Cursor(Application.GetResourceStream(new Uri("pack://application:,,,/views/img/cursors/magnify.ani")).Stream);
             }
         }
 

@@ -112,65 +112,60 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="views\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClientTools.cs" />
-    <Compile Include="Downloader.cs" />
-    <Compile Include="JsonTools.cs" />
-    <Compile Include="NewsLoaderControl.xaml.cs">
-      <DependentUpon>NewsLoaderControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PlayerMini.cs" />
-    <Compile Include="Properties\Resources.ruRU.Designer.cs">
+    <Compile Include="Properties\Constants.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.ruRU.resx</DependentUpon>
+      <DependentUpon>Constants.resx</DependentUpon>
     </Compile>
-    <Compile Include="Settings.xaml.cs">
+    <Compile Include="controllers\ClientTools.cs" />
+    <Compile Include="controllers\Downloader.cs" />
+    <Compile Include="controllers\JsonTools.cs" />
+    <Compile Include="views\NewsLoaderControl.xaml.cs">
+      <DependentUpon>NewsLoaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controllers\PlayerMini.cs" />
+    <Compile Include="views\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VerUpd.xaml.cs">
+    <Compile Include="views\VerUpd.xaml.cs">
       <DependentUpon>VerUpd.xaml</DependentUpon>
     </Compile>
-    <Page Include="LNewVer.xaml">
+    <Page Include="views\LNewVer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LNewVer.xaml.cs">
+    <Compile Include="views\LNewVer.xaml.cs">
       <DependentUpon>LNewVer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewsLoaderControl.xaml">
+    <Page Include="views\NewsLoaderControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
-    </Page>
-    <Page Include="Settings.xaml">
+    <Page Include="views\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Style\LauncherStyle.xaml">
+    <Page Include="views\style\LauncherStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VerUpd.xaml">
+    <Page Include="views\VerUpd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,28 +174,19 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Properties\Constants.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ruRU.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.ruRU.Designer.cs</LastGenOutput>
+      <LastGenOutput>Constants.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <Resource Include="img\cursors\magnify.ani">
+    <Resource Include="views\img\cursors\magnify.ani">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <None Include="packages.config">
@@ -241,50 +227,47 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\logo.png" />
+    <Resource Include="views\img\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\icons\legion.png" />
-    <Resource Include="img\icons\mop.png" />
-    <Resource Include="img\icons\vanilla.png" />
-    <Resource Include="img\icons\wotlk.png" />
+    <Resource Include="views\img\icons\legion.png" />
+    <Resource Include="views\img\icons\mop.png" />
+    <Resource Include="views\img\icons\vanilla.png" />
+    <Resource Include="views\img\icons\wotlk.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="favicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arrow.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\cursors\arrow.cur">
+    <Resource Include="views\img\cursors\arrow.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\icons\close-icon.png" />
-    <Resource Include="img\icons\down-arrow.png" />
+    <Resource Include="views\img\icons\close-icon.png" />
+    <Resource Include="views\img\icons\down-arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\icons\bc.png" />
-    <Resource Include="img\icons\bfa.png" />
-    <Resource Include="img\icons\cata.png" />
-    <Resource Include="img\icons\wod.png" />
+    <Resource Include="views\img\icons\bc.png" />
+    <Resource Include="views\img\icons\bfa.png" />
+    <Resource Include="views\img\icons\cata.png" />
+    <Resource Include="views\img\icons\wod.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\bg_bc.jpg" />
-    <Resource Include="img\bg_cata.jpg" />
-    <Resource Include="img\bg_mop.jpg" />
-    <Resource Include="img\bg_vanilla.jpg" />
-    <Resource Include="img\bg_wod.jpg" />
+    <Resource Include="views\img\bg_bc.jpg" />
+    <Resource Include="views\img\bg_cata.jpg" />
+    <Resource Include="views\img\bg_mop.jpg" />
+    <Resource Include="views\img\bg_vanilla.jpg" />
+    <Resource Include="views\img\bg_wod.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\bg_bfa.jpg" />
+    <Resource Include="views\img\bg_bfa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\bg_wotlk.jpg" />
+    <Resource Include="views\img\bg_wotlk.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\bg_legion.jpg" />
+    <Resource Include="views\img\bg_legion.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
