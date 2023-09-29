@@ -5,9 +5,6 @@ using System.Windows.Input;
 
 namespace Launcher
 {
-    /// <summary>
-    /// Логика взаимодействия для VerUpd.xaml
-    /// </summary>
     public partial class VerUpd
     {
         public VerUpd()

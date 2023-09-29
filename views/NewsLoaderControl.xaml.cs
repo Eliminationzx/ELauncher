@@ -10,9 +10,6 @@ using System.Linq;
 
 namespace Launcher
 {
-    /// <summary>
-    /// Логика взаимодействия для NewsLoaderControl.xaml
-    /// </summary>
     public partial class NewsLoaderControl : UserControl
     {
         #region variables
@@ -55,9 +52,6 @@ namespace Launcher
             return list == null || list.Count == 0 || !list.Any();
         }
 
-        /// <summary>
-        /// Смена отображаемой новости
-        /// </summary>
         private void changeNewsItem(string direction, bool  manual = false)
         {
             if (newsList == null || newsList.First == newsList.Last)

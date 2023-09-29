@@ -9,9 +9,6 @@ using System.IO;
 
 namespace Launcher
 {
-    /// <summary>
-    /// Логика взаимодействия для LNewVer.xaml
-    /// </summary>
     public partial class LNewVer
     {
         public LNewVer()

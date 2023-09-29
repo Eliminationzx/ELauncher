@@ -6,9 +6,6 @@ using System.Windows.Input;
 
 namespace Launcher
 {
-    /// <summary>
-    /// Логика взаимодействия для Settings.xaml
-    /// </summary>
     public partial class Settings : Window
     {
         public Settings()

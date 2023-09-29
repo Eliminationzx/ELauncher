@@ -19,9 +19,6 @@ using System.Windows.Media.Imaging;
 
 namespace Launcher
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow
     {
         #region Variables
