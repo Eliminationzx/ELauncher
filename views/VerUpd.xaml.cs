@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Launcher.controllers;
+using System;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
@@ -23,7 +24,7 @@ namespace Launcher
             }
             catch (Exception ex)
             {
-                // TODO: add exception message
+                Logger.LogException(ex);
             }
         }
 

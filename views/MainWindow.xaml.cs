@@ -16,6 +16,7 @@ using System.Drawing;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
+using Launcher.controllers;
 
 namespace Launcher
 {
@@ -35,6 +36,7 @@ namespace Launcher
             {
                 MessageBox.Show("Unable to connect to the Internet, check your connection and try again", "Connection error", MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
+                Logger.LogWarning("Unable to connect to the Internet!");
                 return;
             }
 
@@ -74,6 +76,8 @@ namespace Launcher
             btn_choosenExpansion.IsChecked = true;
 
             ChangeCurrentServer(firstServer);
+
+            Logger.LogInfo("Initialized expansion check flags");
         }
 
         private async void LoadServersStatsAsync()
@@ -100,6 +104,8 @@ namespace Launcher
             }
 
             onlineLabel.Content = String.Format("{0} players online", onlineCount);
+
+            Logger.LogInfo("Initialized server realm statistics");
         }
 
         private GradientStopCollection DrawServerStatsIcons(string status)
@@ -176,6 +182,8 @@ namespace Launcher
                 return;
 
             pmini.LoadSource(launcherVideosInfoList);
+
+            Logger.LogInfo("Initialized launcher video");
         }
 
         private void InitNotifyIcon()
@@ -206,6 +214,8 @@ namespace Launcher
                 if (e.Button == MouseButtons.Left)
                     Show();
             };
+
+            Logger.LogInfo("Initialized notify icon");
         }
 
         private class NotifyMenuRender : ToolStripProfessionalRenderer
@@ -259,6 +269,8 @@ namespace Launcher
             {
                 btn.Cursor = new Cursor(Application.GetResourceStream(new Uri("pack://application:,,,/views/img/cursors/magnify.ani")).Stream);
             }
+
+            Logger.LogInfo("Initialized main window cursor");
         }
 
         /// <summary>
@@ -287,9 +299,12 @@ namespace Launcher
 
             if (checkUpdateFromNotifyMenu)
             {
-                string msg = error ? "Error during version synchronization, check your connection and try again" : "You have the latest version of the Launcher";
+                string msg = error ? "Error during launcher version synchronization, check your connection and try again" : "You have the latest version of the Launcher";
                 SendAppNotify(Assembly.GetExecutingAssembly().GetName().Name, msg, ToolTipIcon.Info);
+                Logger.LogWarning("Error during launcher version synchronization");
             }
+
+            Logger.LogInfo("Initialized launcher version");
         }
 
         private void btn_download_Click(object sender, RoutedEventArgs e)

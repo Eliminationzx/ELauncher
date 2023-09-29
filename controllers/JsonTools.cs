@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Launcher.controllers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -184,8 +185,9 @@ namespace Launcher
                 }
                 return result;
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -239,8 +241,9 @@ namespace Launcher
             {
                 return new WebClient().DownloadString(Properties.Settings.Default.serverStatsURL);
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -251,8 +254,9 @@ namespace Launcher
             {
                 return new WebClient().DownloadString(Properties.Settings.Default.videosURL);
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -263,8 +267,9 @@ namespace Launcher
             {
                 return new WebClient().DownloadString(Properties.Settings.Default.newsURL);
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -275,8 +280,9 @@ namespace Launcher
             {
                 return new WebClient().DownloadString(Properties.Settings.Default.launcherVersionURL);
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -287,8 +293,9 @@ namespace Launcher
             {
                 return new WebClient().DownloadString(Properties.Settings.Default.launcherChangelogsURL + version);
             }
-            catch
+            catch (WebException ex)
             {
+                Logger.LogException(ex);
                 return null;
             }
         }

@@ -6,6 +6,7 @@ using System.Reflection;
 using System;
 using System.ComponentModel;
 using System.IO;
+using Launcher.controllers;
 
 namespace Launcher
 {
@@ -32,9 +33,9 @@ namespace Launcher
                 wc.DownloadFileAsync(new Uri(Properties.Settings.Default.launcherURL), currentName);
                 wc.DownloadFileCompleted += new AsyncCompletedEventHandler(wc_DownloadFileCompleted);
             }
-            catch
+            catch (Exception ex)
             {
-                // TODO: catch exception
+                Logger.LogException(ex);
             }
         }
 

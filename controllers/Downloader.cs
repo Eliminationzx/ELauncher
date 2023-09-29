@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Launcher.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -214,12 +215,16 @@ namespace Launcher
             {
                 start_timer = DateTime.Now;
                 base_timer.Start();
+
+                Logger.LogInfo("Download process started");
             }
             else
             {
                 sw_cf.Stop();
                 base_timer.Stop();
                 _mw.LoadClientStatus();
+
+                Logger.LogInfo("Download process stoped");
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Launcher.controllers;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
@@ -52,9 +53,9 @@ namespace Launcher
                 _mw.player.Source = new Uri(source_url);
                 _mw.player.Stop();
             }
-            catch
+            catch (Exception ex)
             {
-                // TODO: add exception message
+                Logger.LogException(ex);
             }
         }
 

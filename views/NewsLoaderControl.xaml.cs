@@ -7,6 +7,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Linq;
+using Launcher.controllers;
 
 namespace Launcher
 {
@@ -125,6 +126,8 @@ namespace Launcher
                 btn_left.Visibility = Visibility.Hidden;
                 btn_right.Visibility = Visibility.Hidden;
             }
+
+            Logger.LogInfo("Initialized launcher news");
         }
 
         private void SetItemChanger(TimeSpan interval, bool reload = false)

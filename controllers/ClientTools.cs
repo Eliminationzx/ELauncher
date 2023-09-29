@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Launcher.controllers;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -37,9 +39,9 @@ namespace Launcher
                 string[] clientVersionInfo = FileVersionInfo.GetVersionInfo(Path.Combine(path, Properties.Settings.Default.binaryFileName)).FileVersion.Split(',');
                 return ClientBuilds.Contains(int.Parse(clientVersionInfo[3]));
             }
-            catch
+            catch (Exception ex)
             {
-                // TODO: add exception message
+                Logger.LogException(ex);
                 return false;
             }
         }
@@ -254,9 +256,9 @@ namespace Launcher
                         return "unknown";
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // TODO: add exception message
+                Logger.LogException(ex);
                 return null;
             }
         }
@@ -461,6 +463,7 @@ namespace Launcher
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error of process initialization", MessageBoxButton.OK, MessageBoxImage.Error);
+                Logger.LogException(ex);
             }
         }
     }
